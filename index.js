@@ -41,8 +41,8 @@ async function run(){
      res.send(result)
   })
   app.get('/orders' ,async(req,res)=>{
-    const service = await orderCollection.find().toArray();
-    res.send(service)
+    const orders = await orderCollection.find().toArray();
+    res.send(orders)
   })
   app.delete('/orders/:id', async (req, res) => {
     const id = req.body.id;
